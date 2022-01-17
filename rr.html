@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./rr.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Codedamn - Quiz Project</title>
+</head>
+
+<body>
+    <header class="header">
+        <a class="viewscore" id=leaderboard onclick="viewscore()">View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+        </a> 
+        <p id="time"> Time:50 </p>
+    </header>
+    <main class="main">
+        <div class="start_card" id="startContent">
+             <h1> Coding Quiz Challenge </h1>
+             <p> Try ot answer the code related questions within the time limit. </p>
+             <p> Keep in mind that incorrect answers will penalize your Score/Time by 10sec. </p>
+            <button id="start_btn" onclick="startQuiz()"> Start Quiz </button>
+        </div>
+
+        <div class="start_card quiz" id="quizContent"> 
+            <h2 class="question" id="question">  </h2>
+            <p class="option" id="1" onclick="checkAnswer(this.id)"></p>
+            <p class="option" id="2" onclick="checkAnswer(this.id)"></p>
+            <p class="option" id="3" onclick="checkAnswer(this.id)"></p>
+            <p class="option" id="4" onclick="checkAnswer(this.id)"></p>
+
+            <p id="result"> </p>
+        </div>
+
+        <div id="finalScore" class="start_card final_score"> 
+            <h2> All done! </h2>
+            <p id="finalResult"> </p>
+            <div class="initials">
+                <p> Enter Initials </p>
+                <input id="initial" type="text" />
+                <button onclick="submit()"> Submit </button>
+            </div>
+        </div>
+
+        <div id="highScores" class="start_card high_scores"> 
+            <h2>HighScores</h2>
+            <p id="displayScore"> </p>
+            <button onclick="goBack()"> Go Back </button>
+            <button onclick="goBack()"> Clear History </button>
+        </div>
+    </main>
+    
+    <script src="/rr.js">
+    </script>
+</body>
+
+</html>
+   
